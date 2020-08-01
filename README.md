@@ -8,7 +8,7 @@ My idea is to create a background scrolling game where you control a bear to go 
 
 Since the Learning Python group has basically died at this point, and since I have started working in Javascript again, I have decided to go back to a Javascript implementation of the game.  
 
-The goal for now is the following:
+The goal for now is to implement the following:
 
 * [ ] Create Splash Screen
 * [ ] Load game on click
