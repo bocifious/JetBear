@@ -1,6 +1,6 @@
 ![alt text](http://www.bocifious.com/images/gallery/jetbear_big.png "JetBear! The Game!")
 
-## Coding JetBear with Pygame
+## Coding JetBear with p5.js
 
 I coded a crappy javascript game a long time ago.  the [game](http://www.bocifious.com/jetbear.html) sucks but could be repurposed into a python based game with some ease, since many of the sprites/graphics already exist (_I'm not a designer; luckily I was working with a buddy who helped with some pixel sprites_)
 
