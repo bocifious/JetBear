@@ -8,16 +8,17 @@ My idea is to create a background scrolling game where you control a bear to go 
 
 The goal for now is to implement the following:
 
-* [ ] Create Splash Screen
-* [ ] Load game on click
-    * [ ] Create Button to start
-* [ ] Implement game canvas after start click
+* [x] Create Splash Screen
+    * [x] Create Splash Screen Music
+* [x] Load game on click
+    * [x] Create Button to start
+* [x] Implement game scene after start click
 * [ ] Game mechanics
     * [ ] Implement character sprite for jetpack on/jetpack off
-        * [ ] Jetpack turns on with keypress; otherwise off
-    * [ ] Better score graphic that does not overlay game canvas
+        * [ ] Jetpack turns on with space; otherwise off
+        * [ ] Jetpack physics
+    * [ ] Score graphic
     * [ ] Side-scrolling background
-    * [ ] Some sort of mechanic for jetpack physics approximation (meaning - hold press to go up; otherwise gravity moves down)
     * [ ] Potential enemy that ends game
     * [ ] High score table
-* [ ] Fix music
+* [ ] Game Music
