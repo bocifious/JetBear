@@ -15,7 +15,5 @@ export default class Game extends Phaser.Scene {
         this.add.image(465, 180, 'background');
         this.add.image(465, 180, 'foreground');
         this.physics.add.sprite(this.scale.width / 4, this.scale.height / 2, 'bear-off');
-
-
     }
 }

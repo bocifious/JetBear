@@ -12,6 +12,6 @@ export default class Splash extends Phaser.Scene {
 
     create() {
         this.add.image(465, 180, 'background-splash');
-        this.add.image(465, 200, 'start-button');
+        this.add.image(465, 250, 'start-button');
     }
 }
