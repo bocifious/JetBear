@@ -22,8 +22,14 @@ export default class Game extends Phaser.Scene {
     }
 
     create() {
+        const width = this.scale.width;
+        const height = this.scale.height;
+
+        // repeating foreground
+        this.add.tileSprite(465, 180, width, height, 'foreground')
+            .setOrigin(0);        
+
         this.add.image(465, 180, 'background');
-        this.add.image(465, 180, 'foreground');
         this.bear = this.physics.add.sprite(this.scale.width / 4, this.scale.height / 2, 'bear-off');
     }
 
