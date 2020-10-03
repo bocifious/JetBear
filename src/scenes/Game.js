@@ -41,12 +41,14 @@ export default class Game extends Phaser.Scene {
         this.groundStop(this.bear);
     }
 
+    // sticks at ground - cannot go back up
     groundStop(sprite) {
         const gameHeight = this.scale.height;
-        if (sprite.y > gameHeight && this.cursors.space.isUp) {
+        if (sprite.y > gameHeight - 20) {
             this.sprite.setVelocityY(0);
-        } else if (sprite.y > gameHeight && this.cursors.space.isDown) {
-            this.sprite.setVelocityY(-100);
+            if (this.cursors.space.isDown) {
+                this.sprite.setVelocityY(-100);
+            }
         }
     }
 }
