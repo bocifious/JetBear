@@ -1,6 +1,10 @@
 import Phaser from '../lib/phaser.js'
 
 export default class Game extends Phaser.Scene {
+
+    /** @type {Phaser.Physics.Arcade.Sprite} */
+    bear
+
     constructor() {
         super('game');
     }
@@ -14,6 +18,6 @@ export default class Game extends Phaser.Scene {
     create() {
         this.add.image(465, 180, 'background');
         this.add.image(465, 180, 'foreground');
-        this.physics.add.sprite(this.scale.width / 4, this.scale.height / 2, 'bear-off');
+        this.bear = this.physics.add.sprite(this.scale.width / 4, this.scale.height / 2, 'bear-off');
     }
 }

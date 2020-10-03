@@ -25,5 +25,4 @@ export default class Splash extends Phaser.Scene {
             this.scene.start('game');
         }, this);
     }
-
 }
