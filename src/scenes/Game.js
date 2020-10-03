@@ -48,6 +48,5 @@ export default class Game extends Phaser.Scene {
         } else if (sprite.y > gameHeight && this.cursors.space.isDown) {
             this.sprite.setVelocityY(-100);
         }
-        }
     }
 }
