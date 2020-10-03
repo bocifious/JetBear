@@ -41,10 +41,13 @@ export default class Game extends Phaser.Scene {
         this.groundStop(this.bear);
     }
 
-    groundStop(sprite) { // see page 34
+    groundStop(sprite) {
         const gameHeight = this.scale.height;
-        if (sprite.y > gameHeight) {
+        if (sprite.y > gameHeight && this.cursors.space.isUp) {
             this.sprite.setVelocityY(0);
+        } else if (sprite.y > gameHeight && this.cursors.space.isDown) {
+            this.sprite.setVelocityY(-100);
+        }
         }
     }
 }
