@@ -16,7 +16,8 @@ export default class Splash extends Phaser.Scene {
 
         var music = this.sound.add('intro');
         music.setLoop(true);
-        music.play();
+        // music.play();
+        // removing mousic during dev so I don't have to hear it everytime
         
         var start = this.add.sprite(465, 250, 'start-button').setInteractive();
 
