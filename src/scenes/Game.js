@@ -29,7 +29,7 @@ export default class Game extends Phaser.Scene {
 
     update() {
         if (this.cursors.space.isDown) {
-            this.bear.setVelocityY(-200);
+            this.bear.setVelocityY(-100);
             this.bear.setTexture('bear-on');
         }
 
