@@ -14,9 +14,9 @@ The goal for now is to implement the following:
     * [x] Create Button to start
 * [x] Implement game scene after start click
 * [ ] Game mechanics
-    * [ ] Implement character sprite for jetpack on/jetpack off
-        * [ ] Jetpack turns on with space; otherwise off
-        * [ ] Jetpack physics
+    * [x] Implement character sprite for jetpack on/jetpack off
+        * [x] Jetpack turns on with space; otherwise off
+        * [x] Jetpack physics
     * [ ] Score graphic
     * [ ] Side-scrolling background
     * [ ] Potential enemy that ends game
