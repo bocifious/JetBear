@@ -25,14 +25,14 @@ export default class Game extends Phaser.Scene {
         const width = this.scale.width;
         const height = this.scale.height;
 
-        // repeating foreground
-        this.add.tileSprite(465, 180, width, height, 'foreground');    
+        skyTile = this.add.tileSprite(465, 180, width, height, 'background');
+        groundTile = this.add.tileSprite(465, 180, width, height, 'foreground');
 
-        this.add.image(465, 180, 'background');
         this.bear = this.physics.add.sprite(width / 4, height / 2, 'bear-off');
     }
 
     update() {
+
         if (this.cursors.space.isDown) {
             this.bear.setVelocityY(-100);
             this.bear.setTexture('bear-on');
@@ -44,6 +44,9 @@ export default class Game extends Phaser.Scene {
         }
 
         this.groundStop(this.bear);
+
+        skyTile.tilePosition.x -= 10;
+        groundTile.tilePosition.x -= 20;
     }
 
     // sticks at ground - cannot go back up
