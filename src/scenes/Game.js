@@ -26,8 +26,10 @@ export default class Game extends Phaser.Scene {
         const width = this.scale.width;
         const height = this.scale.height;
 
-        this.add.image(465, 180, 'background');
-        this.add.image(465, 180, 'foreground');
+        this.add.image(465, 180, 'background')
+            .setScrollFactor(0, 1);
+        this.add.image(465, 180, 'foreground')
+            .setScrollFactor(0, 1);
 
         this.bear = this.physics.add.sprite(width / 4, height / 2, 'bear-off');
 
