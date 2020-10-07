@@ -13,7 +13,7 @@ export default new Phaser.Game({
             gravity: {
                 y: 100
             },
-            debug: true //remove when done (this adds collision boxes)
+            debug: false //remove when done (this adds collision boxes)
         }
     }
 })
