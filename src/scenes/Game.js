@@ -17,6 +17,7 @@ export default class Game extends Phaser.Scene {
         this.load.image('foreground', 'assets/images/bgbottom.png');
         this.load.image('bear-off', 'assets/images/idle.png');
         this.load.image('bear-on', 'assets/images/bear.png');
+        this.load.audio('game', 'assets/audio/game.mp3');
 
         this.cursors = this.input.keyboard.createCursorKeys();
     }
@@ -29,6 +30,10 @@ export default class Game extends Phaser.Scene {
         groundTile = this.add.tileSprite(465, 180, width, height, 'foreground');
 
         this.bear = this.physics.add.sprite(width / 4, height / 2, 'bear-off');
+
+        var music = this.sound.add('intro');
+        music.setLoop(true);
+        music.play();
     }
 
     update() {
