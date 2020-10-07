@@ -26,12 +26,12 @@ export default class Game extends Phaser.Scene {
         const width = this.scale.width;
         const height = this.scale.height;
 
-        skyTile = this.add.tileSprite(465, 180, width, height, 'background');
-        groundTile = this.add.tileSprite(465, 180, width, height, 'foreground');
+        this.add.image(465, 180, 'background');
+        this.add.image(465, 180, 'foreground');
 
         this.bear = this.physics.add.sprite(width / 4, height / 2, 'bear-off');
 
-        var music = this.sound.add('intro');
+        var music = this.sound.add('game');
         music.setLoop(true);
         music.play();
     }
@@ -43,15 +43,11 @@ export default class Game extends Phaser.Scene {
             this.bear.setTexture('bear-on');
         }
 
-        const vy = this.bear.body.velocity.y;
-        if (vy > 0 && this.bear.texture.key !== 'bear-off') {
+        if (this.cursors.space.isUp) {
             this.bear.setTexture('bear-off');
         }
 
         this.groundStop(this.bear);
-
-        skyTile.tilePosition.x -= 10;
-        groundTile.tilePosition.x -= 20;
     }
 
     // sticks at ground - cannot go back up
